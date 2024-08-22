@@ -1,0 +1,18 @@
+{
+    "name": "Python Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "features": {},
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "editorconfig.editorconfig"
+            ]
+        }
+    },
+    "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+    "forwardPorts": [
+        8080
+    ]
+}
