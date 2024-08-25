@@ -1,0 +1,9 @@
+#!/bin/sh
+
+addgroup -S sshd
+adduser -S sshd -G sshd
+
+SSHD=/usr/sbin/sshd
+
+echo "Starting sshd:"
+$SSHD -D
