@@ -1,0 +1,6 @@
+[submodule "devcontainer-minikube/spring-petclinic"]
+	path = devcontainer-minikube/spring-petclinic
+	url = https://github.com/spring-projects/spring-petclinic.git
+[submodule "devcontainer-java"]
+	path = devcontainer-java
+	url = https://github.com/spring-projects/spring-petclinic.git
