@@ -8,4 +8,15 @@ Devcontainer features might not work with all images as usually they require `ap
 
 ## notes
 
-minikube needs to be strated manually via `minikube start`
+Minikube needs to be strated manually via `minikube start`
+
+In order to be able to use locally built images with minikube you need to setup setup correct docker environment. It can be done with executing following command:
+```
+eval $(minikube -p minikube docker-env)
+```
+then you need to built local images that you want to use for deployment into minikube cluster. Additionally, `imagePullPolicy` should be set to `never` or `ifnotpresent`, otherwise kubernetes will try to pull image anyway.
+
+To build demo image just run 
+```
+docker build . -t spring-petclinic:latest
+```
