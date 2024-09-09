@@ -14,9 +14,21 @@ In order to be able to use locally built images with minikube you need to setup 
 ```
 eval $(minikube -p minikube docker-env)
 ```
-then you need to built local images that you want to use for deployment into minikube cluster. Additionally, `imagePullPolicy` should be set to `never` or `ifnotpresent`, otherwise kubernetes will try to pull image anyway.
-
-To build demo image just run 
+then you need to built local images that you want to use for deployment into minikube cluster. Additionally, `imagePullPolicy` should be set to `never` or `ifnotpresent`, otherwise kubernetes will try to pull image anyway. Alternatively, you can use following image to move localy built image to minikube docker env: 
+```
+minikube image load <image-name>:<image-version>
+```
+In such case spring-petclinic needs to be built first with following command:
 ```
 docker build . -t spring-petclinic:latest
 ```
+Alternatively, you can use minikube docker environment to build image directly by using following
+```
+minikube image build . -t spring-petclinic:latest
+```
+
+To expose ClusterIP services for local development you might run:
+```
+minikube service <name>|--all
+```
+Make sure that ports are then forwarded to the host which should be done automatically.
