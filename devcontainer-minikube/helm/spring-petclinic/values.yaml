@@ -5,7 +5,7 @@
 image:
   repository: spring-petclinic
   tag: latest
-  pullPolicy: never
+  pullPolicy: Never
 
 # Specify the deployment settings
 deployment:
