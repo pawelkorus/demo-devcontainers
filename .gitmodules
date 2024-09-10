@@ -4,3 +4,6 @@
 [submodule "devcontainer-java"]
 	path = devcontainer-java
 	url = https://github.com/spring-projects/spring-petclinic.git
+[submodule "devcontainer-docker-compose/spring-petclinic"]
+	path = devcontainer-docker-compose/spring-petclinic
+	url = https://github.com/spring-projects/spring-petclinic.git
