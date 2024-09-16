@@ -1,6 +1,8 @@
 {
     "name": "Rust Dev Container",
     "image": "mcr.microsoft.com/devcontainers/rust:latest",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace/devcontainer-rust-hello-world",
     "customizations": {
         "vscode": {
             "extensions": [

@@ -2,7 +2,7 @@
 	"name": "Spring-petclinic with docker-compose",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
-	"workspaceFolder": "/workspace",
+	"workspaceFolder": "/workspace/devcontainer-docker-compose",
 	"shutdownAction": "stopCompose"
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
